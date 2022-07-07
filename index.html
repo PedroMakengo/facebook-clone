@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML</title>
+
+    <style>
+      ul {
+        list-style: none;
+      }
+
+      #containerNavegator {
+        max-width: 80%;
+        margin: 0 auto;
+
+        display: flex;
+        align-items: center;
+      }
+
+      #containerNavegator .logo {
+        width: 30%;
+      }
+
+      #containerNavegator nav {
+        width: 70%;
+      }
+
+      #containerNavegator nav ul {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #containerNavegator nav ul li a {
+        color: #000000;
+        background-color: red;
+        text-decoration: none;
+      }
+
+      main {
+        display: flex;
+      }
+
+      #btnCarrosel {
+        border: 2px solid #daa521;
+        display: flex;
+        width: 15%;
+        height: 6vh;
+
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+        border-radius: 0.3rem;
+
+        color: #daa521;
+      }
+
+      #btnCarrosel + #btnCarrosel {
+        margin-left: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="containerNavegator">
+        <div class="logo">
+          <img src="logo.svg" alt="" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Galeria</a></li>
+            <li><a href="#">Contactos</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Criar uma conta</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <a href="#" id="btnCarrosel">Botão</a>
+      <a href="#" id="btnCarrosel">Botão</a>
+    </main>
+  </body>
+</html>
