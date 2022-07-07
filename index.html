@@ -6,12 +6,17 @@
     <title>HTML</title>
 
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
       ul {
         list-style: none;
       }
 
       #containerNavegator {
-        max-width: 80%;
+        max-width: 90%;
         margin: 0 auto;
 
         display: flex;
@@ -19,45 +24,107 @@
       }
 
       #containerNavegator .logo {
-        width: 30%;
+        width: 50%;
+        z-index: 111;
       }
 
       #containerNavegator nav {
-        width: 70%;
+        width: 50%;
       }
 
       #containerNavegator nav ul {
-        display: flex;
-        justify-content: space-between;
+        display: none;
+        transform: translateX(100%);
       }
 
       #containerNavegator nav ul li a {
         color: #000000;
-        background-color: red;
         text-decoration: none;
       }
 
-      main {
-        display: flex;
-      }
+      #containerNavegator .menu-ative {
+        display: block;
+        background: rgba(6, 6, 6, 0.872);
 
-      #btnCarrosel {
-        border: 2px solid #daa521;
-        display: flex;
-        width: 15%;
-        height: 6vh;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        position: fixed;
 
+        display: flex;
+
+        padding-top: 20vh;
         align-items: center;
-        justify-content: center;
-        text-decoration: none;
+        flex-direction: column;
 
-        border-radius: 0.3rem;
+        gap: 2rem;
 
-        color: #daa521;
+        opacity: 1;
+        transition: transform 300s;
+        transform: translateX(0);
       }
 
-      #btnCarrosel + #btnCarrosel {
-        margin-left: 1rem;
+      #containerNavegator .menu-ative li {
+        width: 100%;
+        height: 8rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      #containerNavegator .menu-ative li a {
+        font-size: 1.8rem;
+        color: white;
+      }
+
+      #menuMobile {
+        border: 0;
+        width: 120px;
+        height: 5rem;
+        background: #227df3;
+
+        border-radius: 0.5rem;
+
+        font-size: 1.6rem;
+        color: white;
+
+        z-index: 1;
+      }
+
+      @media (min-width: 1024px) {
+        #containerNavegator {
+          max-width: 72%;
+          justify-content: space-between;
+          gap: 2rem;
+        }
+
+        #containerNavegator .logo {
+          width: 30%;
+        }
+
+        #containerNavegator nav {
+          width: 60%;
+          display: block;
+        }
+
+        #containerNavegator nav ul {
+          display: flex;
+          justify-content: space-between;
+          transform: none;
+        }
+
+        #containerNavegator li a {
+          color: black;
+          font-size: 1rem;
+        }
+
+        #menuMobile {
+          display: none;
+        }
       }
     </style>
   </head>
@@ -68,7 +135,7 @@
           <img src="logo.svg" alt="" />
         </div>
         <nav>
-          <ul>
+          <ul class="menu">
             <li><a href="#">Início</a></li>
             <li><a href="#">Sobre nós</a></li>
             <li><a href="#">Galeria</a></li>
@@ -77,12 +144,21 @@
             <li><a href="#">Criar uma conta</a></li>
           </ul>
         </nav>
+        <button id="menuMobile">Menu</button>
       </div>
     </header>
 
-    <main>
-      <a href="#" id="btnCarrosel">Botão</a>
-      <a href="#" id="btnCarrosel">Botão</a>
-    </main>
+    <script>
+      let btn = document.getElementById("menuMobile");
+      let menuAtive = document.querySelector(".menu");
+
+      btn.addEventListener("click", function (e) {
+        if (!menuAtive.classList.contains("menu-ative")) {
+          menuAtive.classList.add("menu-ative");
+        } else {
+          menuAtive.classList.remove("menu-ative");
+        }
+      });
+    </script>
   </body>
 </html>
