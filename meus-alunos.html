@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Facebook-Clone</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      main {
+        display: none;
+      }
+
+      body {
+        background: rgb(7, 1, 24);
+        color: white;
+      }
+
+      .meus-alunos {
+        background: #ffffff28;
+        width: 700px;
+
+        margin: 0 auto;
+        padding: 40px;
+
+        /* Pesquisar - FlexBox */
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        /* End Pesquisar*/
+      }
+
+      .meus-alunos > div {
+        background: red;
+        width: 50%;
+      }
+
+      .meus-alunos .alunos {
+        margin-bottom: 20px;
+      }
+
+      .meus-alunos div ul {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div>
+        <img src="img/logo.svg" alt="Logo do facebook" />
+        <h2>
+          O Facebook ajuda-te a comunicar e a partilhar com as pessoas que fazem
+          parte da tua vida.
+        </h2>
+      </div>
+
+      <div>
+        <form>
+          <input type="text" placeholder="E-mail ou número de telefone" />
+          <input type="password" placeholder="Palavra Passe" />
+          <button>Iniciar Sessão</button>
+
+          <a href="#">Não sabes a tua palavra passe ?</a>
+
+          <div>
+            <a href="#">Criar nova conta</a>
+          </div>
+        </form>
+        <p>
+          <a href="#">Cria uma Página</a> para uma celebridade, marca ou empresa
+        </p>
+      </div>
+    </main>
+
+    <div class="meus-alunos">
+      <div class="alunos">
+        <h2>Alunos</h2>
+        <ul>
+          <li>João Pedro</li>
+          <li>Manuel Eduardo</li>
+          <li>Maria António</li>
+        </ul>
+      </div>
+      <div class="turmas">
+        <h2>Turmas</h2>
+        <ul>
+          <li>A1</li>
+          <li>A2</li>
+          <li>A3</li>
+          <li>A3</li>
+          <li>A3</li>
+          <li>A4</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
