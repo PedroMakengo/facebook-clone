@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f0f2f5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  width: 75%; /* Largura da Tela*/
+  height: 100vh; /* Altura da Tela*/
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Exibição para o centro*/
+
+  gap: 20px;
+}
+
+/* Estilizar Col-a */
+main .col-a {
+  width: 60%;
+}
+
+main .col-a img {
+  width: 60%;
+  margin-left: -40px;
+}
+
+main .col-a h2 {
+  width: 80%;
+  font-size: 28px;
+  font-weight: 400;
+
+  color: #1e1e21;
+}
+
+/* Estelizar Col-b */
+main .col-b {
+  width: 40%;
+}
+
+main .col-b form {
+  background: white;
+  padding: 20px;
+  height: auto;
+
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main .col-b form input,
+main .col-b form button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 5px;
+  border: 1px solid #dddfe2;
+}
+
+main .col-b form input + input {
+  margin: 15px 0;
+}
+
+main .col-b form input::placeholder {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+main .col-b form button {
+  background: #1877f2;
+  font-size: 16px;
+  font-weight: bold;
+
+  border-radius: 5px;
+  border: 0;
+  color: white;
+}
+
+main .col-b form button:hover {
+  cursor: pointer;
+  background: #0868e4;
+}
+
+main .col-b form > a {
+  margin: 20px 0;
+  text-align: center;
+
+  color: #189cf8;
+  text-decoration: none;
+}
+
+main .col-b form > a:hover {
+  text-decoration: underline;
+}
+
+main .col-b form div a {
+  width: 50%;
+  padding: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 15px auto 0 auto;
+  background: #42b72a;
+
+  border-radius: 5px;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  color: white;
+
+  text-decoration: none;
+}
+
+main .col-b form div a:hover {
+  background: #2ea517;
+}
+
+hr {
+  border: 0.1px solid #f0f0f0;
+  border-width: 0.1px;
+}
+
+main .col-b p {
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+main .col-b p a {
+  font-weight: bold;
+  color: black;
+
+  text-decoration: none;
+}
